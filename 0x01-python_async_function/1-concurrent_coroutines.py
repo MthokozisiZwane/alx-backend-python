@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""
+A module that execute multiple coroutines at the same time with async
+"""
+
 import asyncio
 from typing import List
 from random import randint
