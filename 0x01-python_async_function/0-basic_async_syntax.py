@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""
+This module provides an asynchronous coroutine to wait for a random delay.
+"""
+
 import asyncio
 import random
 
