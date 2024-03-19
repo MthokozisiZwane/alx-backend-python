@@ -10,7 +10,7 @@ from typing import Awaitable
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-def task_wait_random(max_delay: int) -> Awaitable[float]:
+def task_wait_random(max_delay: float = 10.0) -> asyncio.Task:
     """
     Regular function that returns an asyncio.Task for
     wait_random with the given max_delay.
