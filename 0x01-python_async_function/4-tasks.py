@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+"""
+A module that executes task_wait_random n times concurrently with
+    the specified max_delay
+"""
+
 import asyncio
 from typing import List, Awaitable
 wait_random = __import__('0-basic_async_syntax').wait_random
