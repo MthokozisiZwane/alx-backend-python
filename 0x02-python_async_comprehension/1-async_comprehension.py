@@ -12,6 +12,8 @@ async_generator = __import__('0-async_generator').async_generator
 async def async_comprehension() -> List[int]:
     """
     Asynchronously collects 10 random numbers using async comprehension.
+    Returns:
+        List[int]: A list of 10 random integers between 0 and 10 (inclusive)
 
     """
 
