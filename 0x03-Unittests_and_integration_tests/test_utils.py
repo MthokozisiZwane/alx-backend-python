@@ -54,9 +54,17 @@ class TestGetJson(unittest.TestCase):
 
 
 def memoize(fn):
+    """
+    the memoize function
+    """
+
     attr_name = "_{}".format(fn.__name__)
 
     def memoized(self):
+        """
+        memoize
+        """
+
         if not hasattr(self, attr_name):
             setattr(self, attr_name, fn(self))
         return getattr(self, attr_name)
