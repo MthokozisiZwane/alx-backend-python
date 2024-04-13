@@ -31,6 +31,18 @@ class TestGithubOrgClient(unittest.TestCase):
         # Assert get_json is called once with the expected argument
         mock_get_json.assert_called_once_with(expected_url)
 
+    @patch("client.get_json", return_value={"repos_url": "https://api.github.com/orgs/test_org/repos"})
+    def test_public_repos_url(self, mock_get_json):
+        """Test the _public_repos_url property of GithubOrgClient.
+
+        Parameters:
+            mock_get_json (MagicMock): Mock object for the get_json function.
+        """
+        client = GithubOrgClient("test_org")
+
+        # Assert _public_repos_url returns the expected URL
+        self.assertEqual(client._public_repos_url, "https://api.github.com/orgs/test_org/repos")
+
 
 if __name__ == "__main__":
     unittest.main()
